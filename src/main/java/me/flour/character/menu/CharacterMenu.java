@@ -1,22 +1,19 @@
 package me.flour.character.menu;
 
+
 import me.flour.character.data.PlayerCache;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.Sound;
+import me.flour.character.settings.Settings;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
+
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.menu.Menu;
 import org.mineacademy.fo.menu.button.Button;
 import org.mineacademy.fo.menu.model.ItemCreator;
 import org.mineacademy.fo.remain.CompMaterial;
-import org.mineacademy.fo.remain.CompSound;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class CharacterMenu extends Menu {
 
@@ -24,38 +21,17 @@ public class CharacterMenu extends Menu {
 	private final Button CharacterName;
 	private final Button BackStory;
 	private final Button Abilities;
-	private final Button Head;
 
 	public CharacterMenu(final Player player, final Player showingTo) {
 
-		setSize(9 * 6);
+		setSize(Settings.MENU_SIZE);
 
 
 
-		if (player.equals(showingTo)) {
-			setTitle( "\uF808" + ChatColor.WHITE + "\uF001");
-		} else {
-			setTitle("\uF808" + ChatColor.WHITE + "\uF001");
-		}
-
-
-		Head = new Button() {
-			@Override
-			public void onClickedInMenu(Player player, Menu menu, ClickType clickType) {
-
-				showingTo.closeInventory();
-				Common.tell(showingTo,"&2Closed Character Info Menu.");
-			}
-
-			@Override
-			public ItemStack getItem() {
+		setTitle(Settings.MENU_TITLE + player.getDisplayName());
 
 
 
-				return ItemCreator.of(CompMaterial.PLAYER_HEAD, "&2Database repository for: " + player.getDisplayName()).skullOwner(player.getName()
-				).build().make();
-			}
-		};
 
 		Abilities = new Button() {
 			@Override
@@ -69,7 +45,7 @@ public class CharacterMenu extends Menu {
 
 				final PlayerCache cache = PlayerCache.getCache(player);
 
-				return ItemCreator.of(CompMaterial.BIRCH_SIGN, "&aAbilities",
+				return ItemCreator.of(Settings.ABILITIES_ITEM, "&aAbilities",
 						"&a",
 						"&a<------------------->",
 						"&a",
@@ -117,7 +93,7 @@ public class CharacterMenu extends Menu {
 
 
 
-				return ItemCreator.of(CompMaterial.DARK_OAK_SIGN, "&5Additional information",
+				return ItemCreator.of(Settings.ADDITIONAL_ITEM, "&5Additional information",
 						"&5",
 						"&5<------------------->",
 						"&5",
@@ -160,26 +136,53 @@ public class CharacterMenu extends Menu {
 
 				final PlayerCache cache = PlayerCache.getCache(player);
 
-				return ItemCreator.of(CompMaterial.OAK_SIGN, "&bCharacter Info",
-						"",
-						"&bFull Name: " + (cache.getName() != null ? cache.getName() : "Not Chosen"),
-						"",
-						"&b<------------------->",
-						"",
-						"&bAlias: " + (cache.getAlias() != null ? cache.getAlias() : "Not Chosen"),
-						"",
-						"&b<------------------->",
-						"",
-						"&bAge: " + (cache.getAge() > 0 ? cache.getAge() : "Not Chosen"),
-						"",
-						"&b<------------------->",
-						"",
-						"&bGender: " + (cache.getGender() != null ? cache.getGender() : "Not Chosen"),
-						"",
-						"&b<------------------->"
+
+				if (Settings.PLAYERHEADS) {
+					return ItemCreator.of(CompMaterial.PLAYER_HEAD, "&bCharacter Info",
+							"",
+							"&bFull Name: " + (cache.getName() != null ? cache.getName() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bAlias: " + (cache.getAlias() != null ? cache.getAlias() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bAge: " + (cache.getAge() > 0 ? cache.getAge() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bGender: " + (cache.getGender() != null ? cache.getGender() : "Not Chosen"),
+							"",
+							"&b<------------------->"
 
 
-				).build().make();
+					).skullOwner(player.getName()).build().make();
+				} else if (!Settings.PLAYERHEADS) {
+					return ItemCreator.of(Settings.CHARACTER_ITEM, "&bCharacter Info",
+							"",
+							"&bFull Name: " + (cache.getName() != null ? cache.getName() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bAlias: " + (cache.getAlias() != null ? cache.getAlias() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bAge: " + (cache.getAge() > 0 ? cache.getAge() : "Not Chosen"),
+							"",
+							"&b<------------------->",
+							"",
+							"&bGender: " + (cache.getGender() != null ? cache.getGender() : "Not Chosen"),
+							"",
+							"&b<------------------->"
+
+
+					).build().make();
+				}
+
+				return null;
+
 
 
 			}
@@ -191,15 +194,12 @@ public class CharacterMenu extends Menu {
 	@Override
 	public ItemStack getItemAt(final int slot) {
 
-		if (slot == 9 * 1 + 4)
+		if (slot == Settings.CHARACTER_SLOT)
 			return CharacterName.getItem();
-
-		if (slot == 9 * 1 + 2)
+		if (slot == Settings.ADDITIONAL_SLOT)
 			return BackStory.getItem();
-		if (slot == 9 * 1 + 6)
+		if (slot == Settings.ABILITIES_SLOT)
 			return Abilities.getItem();
-		if (slot == 37)
-			return Head.getItem();
 
 		return null;
 	}

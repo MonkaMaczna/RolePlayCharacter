@@ -1,0 +1,29 @@
+# Should plugin implement player head of player in menu (not recommended for servers without online)
+Player_Heads_In_Menu: true
+
+Menu_Settings:
+  # Size of the menu (recommended to not change this setting)
+  Menu_Size: 27
+  Menu_Title: "&bInformation for "
+  Character_Info:
+    # Slot for a category
+    Slot: 15
+    # Item for a category (If player heads disabled)
+    Item: OAK_SIGN
+  Additional_Info:
+    # Slot for a category
+    Slot: 11
+    # Item for a category
+    Item: DARK_OAK_SIGN
+  Abilities:
+    # Slot for a category
+    Slot: 15
+    # Item for a category
+    Item: BIRCH_SIGN
+
+
+# DO NOT CHANGE THESE SETTINGS!!!
+Prefix: "&l&7[&l&bLocal &l&aChat Manager&l&7]"
+Log_Lag_Over_Millis: 100
+Debug: [ ]
+Version: 1
