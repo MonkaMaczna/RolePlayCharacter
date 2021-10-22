@@ -1,4 +1,5 @@
 me/flour/character/Commands/SetStrengthSub.class
+me/flour/character/settings/Settings.class
 me/flour/character/Commands/InfoSub.class
 me/flour/character/Commands/SetIntelligenceSub.class
 me/flour/character/Commands/SetPersonalitySub.class
@@ -18,7 +19,6 @@ me/flour/character/Commands/SetGenderSub.class
 me/flour/character/menu/CharacterMenu$2.class
 me/flour/character/Commands/SetDefenseSub.class
 me/flour/character/Commands/SetWeakPointsSub.class
-me/flour/character/menu/CharacterMenu$4.class
 me/flour/character/Commands/SetAgeSub.class
 me/flour/character/menu/CharacterMenu.class
 me/flour/character/Commands/CharacterParent.class

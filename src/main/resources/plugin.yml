@@ -1,5 +1,5 @@
 
-name: RoleplayCharacterInfo
+name: RoleplayCharacterInformation
 version: ${project.version}
 main: ${main.class}
 author: Wheat

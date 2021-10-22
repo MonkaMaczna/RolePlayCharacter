@@ -1,6 +1,6 @@
 
-name: CharacterInformation
-version: 0.0.3
+name: RoleplayCharacterInformation
+version: 1.0.0
 main: me.flour.character.CharacterInfo
 author: Wheat
 api-version: 1.17
