@@ -123,21 +123,7 @@ public class PlayerCache extends YamlSectionConfig implements ConfigSerializable
 
 
 
-		/*
-		Integer strenght;
-	Integer dexterity;
-	Integer intelligence;
-	Integer agility;
-	Integer defense;
-	String occupation;
-	String abilities;
-	String weakpoints;
-	String personality;
-	String raoipitf;
-	String alias;
-	String status;
-	String physical;
-		 */
+
 	}
 
 	public void setStrength(final Integer strength) {

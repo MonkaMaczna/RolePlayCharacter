@@ -1,6 +1,7 @@
 package me.flour.character.Commands;
 
 import me.flour.character.data.PlayerCache;
+import org.apache.commons.lang.math.NumberUtils;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.command.SimpleCommandGroup;
 import org.mineacademy.fo.command.SimpleSubCommand;
@@ -17,11 +18,17 @@ public class SetIntelligenceSub extends SimpleSubCommand {
 
 		if (args.length > 0) {
 
-			final int setIntelligence = Integer.parseInt(args[0]);
+			if (NumberUtils.isNumber(args[0])) {
+				final int setIntelligence = Integer.parseInt(args[0]);
 
-			cache.setIntelligence(setIntelligence);
+				cache.setIntelligence(setIntelligence);
 
-			Common.tell(getPlayer(), "&aYou have changed your intelligence to " + setIntelligence);
+				Common.tell(getPlayer(), "&aYou have changed your intelligence to " + setIntelligence);
+			} else {
+				Common.tell(getPlayer(), "&cNot a number!");
+			}
+
+
 
 		} else if (args.length == 0) {
 

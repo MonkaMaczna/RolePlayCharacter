@@ -21,13 +21,7 @@ public class SetAbilitiesSub extends SimpleSubCommand {
 		if (args.length > 0) {
 
 
-			if (args[0].equals("test")) {
-				ItemStack itemstack = new ItemStack(Material.IRON_INGOT,1);
-				ItemMeta itemMeta = itemstack.getItemMeta();
-				itemMeta.setCustomModelData(1234567);
-				itemstack.setItemMeta(itemMeta);
-				getPlayer().getInventory().addItem(itemstack);
-			} else {
+
 				final StringBuilder builder = new StringBuilder();
 				for (final String arg : args) {
 					builder.append(arg).append(" ");
@@ -37,7 +31,7 @@ public class SetAbilitiesSub extends SimpleSubCommand {
 				cache.setAbilities(newName);
 
 				Common.tell(getPlayer(), "&aYou changed your abilities to: " + newName);
-			}
+
 
 
 

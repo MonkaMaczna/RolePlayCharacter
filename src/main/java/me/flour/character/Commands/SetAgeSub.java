@@ -1,6 +1,7 @@
 package me.flour.character.Commands;
 
 import me.flour.character.data.PlayerCache;
+import org.apache.commons.lang.math.NumberUtils;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.command.SimpleCommandGroup;
 import org.mineacademy.fo.command.SimpleSubCommand;
@@ -17,11 +18,17 @@ public class SetAgeSub extends SimpleSubCommand {
 
 		if (args.length > 0) {
 
-			final int setAg = Integer.parseInt(args[0]);
+			if (NumberUtils.isNumber(args[0])) {
+				final int setAg = Integer.parseInt(args[0]);
 
-			cache.setAge(setAg);
+				cache.setAge(setAg);
 
-			Common.tell(getPlayer(), "&aYou have changed your age to " + setAg);
+				Common.tell(getPlayer(), "&aYou have changed your age to " + setAg);
+			} else {
+				Common.tell(getPlayer(), "&cNot a number!");
+			}
+
+
 
 		} else if (args.length == 0) {
 

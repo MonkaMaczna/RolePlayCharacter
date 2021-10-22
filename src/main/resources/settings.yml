@@ -7,7 +7,7 @@ Menu_Settings:
   Menu_Title: "&bInformation for "
   Character_Info:
     # Slot for a category
-    Slot: 15
+    Slot: 13
     # Item for a category (If player heads disabled)
     Item: OAK_SIGN
   Additional_Info:
