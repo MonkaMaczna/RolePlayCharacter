@@ -1,6 +1,7 @@
 me/flour/character/Commands/SetStrengthSub.class
 me/flour/character/settings/Settings.class
 me/flour/character/Commands/InfoSub.class
+me/flour/character/UpdateChecker.class
 me/flour/character/Commands/SetIntelligenceSub.class
 me/flour/character/Commands/SetPersonalitySub.class
 me/flour/character/data/PlayerCache.class

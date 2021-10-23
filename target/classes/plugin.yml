@@ -1,8 +1,8 @@
 
 name: RoleplayCharacterInformation
-version: 1.0.0
+version: 1.0.1
 main: me.flour.character.CharacterInfo
 author: Wheat
-api-version: 1.17
+api-version: 1.13
 libraries:
   - org.openjdk.nashorn:nashorn-core:15.3

@@ -34,7 +34,8 @@ public class SetAgeSub extends SimpleSubCommand {
 
 			final int age = cache.getAge();
 
-			Common.tell(getPlayer(), "&aYour age is " + age, "&a You can change it using: /character age <number>");
+			Common.tell(getPlayer(), "&aYour age is " + age,
+					"&a You can change it using: /character age <number>");
 
 		}
 	}
