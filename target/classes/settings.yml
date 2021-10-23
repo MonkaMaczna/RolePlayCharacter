@@ -1,5 +1,10 @@
 # Should plugin implement player head of player in menu (not recommended for servers without online)
 Player_Heads_In_Menu: true
+# Should players be able to view other players information by
+# Right clicking them when sneaking?
+Right_Clicking: true
+# Should plugin check for updates on start (recommended to not change)
+Check_Updates: true
 
 Menu_Settings:
   # Size of the menu (recommended to not change this setting)
@@ -26,4 +31,4 @@ Menu_Settings:
 Prefix: "&l&7[&l&bRoleplay &l&aCharacter Information&l&7]"
 Log_Lag_Over_Millis: 100
 Debug: [ ]
-Version: 1
+Version: 2

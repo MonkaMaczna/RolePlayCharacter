@@ -6,7 +6,7 @@ import org.mineacademy.fo.settings.SimpleSettings;
 public class Settings extends SimpleSettings {
 	@Override
 	protected int getConfigVersion() {
-		return 1;
+		return 2;
 
 	}
 
@@ -21,6 +21,8 @@ public class Settings extends SimpleSettings {
 	public static CompMaterial ABILITIES_ITEM;
 	public static Integer MENU_SIZE;
 	public static String MENU_TITLE;
+	public static Boolean RIGHT_CLICK;
+	public static Boolean CHECK_UPDATE;
 
 
 	private static void init() {
@@ -33,6 +35,8 @@ public class Settings extends SimpleSettings {
 		ABILITIES_ITEM = getMaterial("Menu_Settings.Abilities.Item");
 		MENU_SIZE = getInteger("Menu_Settings.Menu_Size");
 		MENU_TITLE = getString("Menu_Settings.Menu_Title");
+		RIGHT_CLICK = getBoolean("Right_Clicking");
+		CHECK_UPDATE = getBoolean("Check_Updates");
 
 
 

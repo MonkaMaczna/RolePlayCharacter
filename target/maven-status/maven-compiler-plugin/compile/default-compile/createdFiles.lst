@@ -1,4 +1,5 @@
 me/flour/character/Commands/SetStrengthSub.class
+me/flour/character/Events/RightClickEvent.class
 me/flour/character/settings/Settings.class
 me/flour/character/Commands/InfoSub.class
 me/flour/character/UpdateChecker.class
