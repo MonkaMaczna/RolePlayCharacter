@@ -19,6 +19,7 @@
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/SetAbilitiesSub.java
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/SetDexteritySub.java
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/SetIntelligenceSub.java
+/Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/UpdateSub.java
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/UpdateChecker.java
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/SetDefenseSub.java
 /Users/maka/Documents/GitHub/RolePlayCharacter/src/main/java/me/flour/character/Commands/SetStrengthSub.java

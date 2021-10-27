@@ -1,6 +1,7 @@
 package me.flour.character.API;
 
 import me.flour.character.data.PlayerCache;
+import me.flour.character.menu.CharacterMenu;
 import org.bukkit.entity.Player;
 
 public class CharacterAPI {
@@ -28,5 +29,8 @@ public class CharacterAPI {
 	public static String getAlias(final Player player) {
 		PlayerCache cache = PlayerCache.getCache(player);
 		return cache.getAlias();
+	}
+	public static void openCharacterMenu(final Player showingTo, Player playerData) {
+		new CharacterMenu(playerData,showingTo).displayTo(showingTo);
 	}
 }

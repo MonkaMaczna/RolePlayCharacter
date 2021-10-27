@@ -6,6 +6,7 @@ me/flour/character/UpdateChecker.class
 me/flour/character/Commands/SetIntelligenceSub.class
 me/flour/character/Commands/SetPersonalitySub.class
 me/flour/character/data/PlayerCache.class
+me/flour/character/Commands/UpdateSub.class
 me/flour/character/CharacterInfo.class
 me/flour/character/menu/CharacterMenu$3.class
 me/flour/character/Commands/SetPhysicalSub.class

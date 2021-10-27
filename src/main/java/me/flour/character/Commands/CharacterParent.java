@@ -24,6 +24,7 @@ public class CharacterParent extends SimpleCommandGroup {
 		registerSubcommand(new SetAbilitiesSub(this));
 		registerSubcommand(new SetWeakPointsSub(this));
 		registerSubcommand(new InfoSub(this));
+		registerSubcommand(new UpdateSub(this));
 
 
 	}
