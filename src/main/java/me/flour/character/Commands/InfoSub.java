@@ -31,9 +31,9 @@ public class InfoSub extends SimpleSubCommand {
 
 
 		} else if (args.length == 0) {
-			final Player player = getPlayer();
 
-			new CharacterMenu(player, player).displayTo(player);
+
+			new CharacterMenu(getPlayer(), getPlayer()).displayTo(getPlayer());
 
 
 		}
